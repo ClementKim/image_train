@@ -28,7 +28,10 @@ def checking_dataset(home_dir):
 
     elif not (file in listdir(dataset_dir) for file in files):
         for i in listdir(dataset_dir):
-            remove(path.join(dataset_dir, i))
+            try:
+                remove(path.join(dataset_dir, i))
+            except:
+                pass
         labeling(home_dir, dataset_dir)
 
     else:

@@ -19,7 +19,7 @@ home_dir = getcwd()
 
 img_dir = path.join(home_dir, "img")
 
-image_check(home_dir)
+#image_check(home_dir)
 data_exist_or_not(home_dir, img_dir)
 checking_dataset(home_dir)
 
