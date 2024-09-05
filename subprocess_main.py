@@ -32,7 +32,7 @@ for optimizer in optimizer_list:
     for loss_fn in loss_fn_list:
         for learning_rate in learning_rate_list:
             for epochs in epoch_list:
-                for _ in range(1):
+                for _ in range(10):
                     ipt = str(optimizer) + "_" + str(learning_rate) + "_" + loss_fn + "_" + str(epochs) + "_" + str(idx)
                     output = subprocess.Popen([sys.executable, "-u", "main.py", ipt, "-r"], stdout = subprocess.PIPE, stderr = subprocess.STDOUT, universal_newlines = True)
                 
